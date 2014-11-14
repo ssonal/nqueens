@@ -1,16 +1,17 @@
 import numpy as np
-import random
 from time import time
 from sys import stdout
 
-N = 4
+N = 6
 
 def incrementBoard(board,N):
    board = np.zeros((N,N), dtype='int')
+   ar = np.zeros(N-1, dtype='int')
+   ar = np.append(ar, [1])
 
    for i in xrange(N):
-      queenps = random.randint(0,N-1)
-      board[i][queenps] = 1
+      np.random.shuffle(ar)
+      board[i] = ar
 
    return board
    
@@ -35,7 +36,6 @@ def diagonal(board):
 
 
 if __name__ == "__main__":
-   #create board
    timer = time()
    board = []
             
@@ -57,5 +57,5 @@ if __name__ == "__main__":
       
       print "\n\nDone!\n"
       print board
-      print "\nTime: %3.4f" %((time()-timer))
+      print "\nTime: %3.3fs" %((time()-timer))
       exit()
