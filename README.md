@@ -10,4 +10,5 @@ In this repository I have attempted to employ different techniques to solve this
 
 - [queens.py](https://github.com/sonal-saldanha/nqueens/blob/master/queens.py) is a traditional brute-force approach modified by using some randomness. 
 - [queensAlg.py](https://github.com/sonal-saldanha/nqueens/blob/master/queenAlg.py) is another implementation leveraging the power of bitwise representation of numbers and hence, bounds on the positions of queens in adjacent rows/columns.
+- [queensBacktrack.py](https://github.com/sonal-saldanha/nqueens/blob/master/queensBacktrack.py) is an implementation that uses the binary representation of a number while at the same time using the concept of backtracking in order to process the board.
 
